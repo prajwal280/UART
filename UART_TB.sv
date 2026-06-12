@@ -9,7 +9,7 @@ interface uart_if(input logic clk);
     logic tx_start;
 
     logic [7:0] rx_data;
-    logic rx_done;
+    
 
 endinterface
 
@@ -106,7 +106,7 @@ module uart_tb;
         .rx(vif.tx),          // loopback
         .tx(vif.tx),
         .rx_data(vif.rx_data),
-        .rx_done(vif.rx_done)
+        
     );
 
     // clock
